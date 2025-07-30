@@ -1,0 +1,25 @@
+
+flowchart TD
+    A[Démarrage du script] --> B[Analyse des arguments]
+    B --> C[Initialisation du logging]
+    C --> D[Vérification des prérequis]
+    D --> E[Préparation du conteneur LXD]
+    E --> F[Lancement du cycle de test]
+
+    F --> G1{Tentative #1}
+    G1 -->|OK| H[Analyse des résultats]
+    H -->|Succès| Z[Succès du test]
+
+    H -->|Échec| G2{Nouvelle tentative ?}
+    G2 -->|Oui| R1[Restaurer snapshot initial]
+    R1 --> G1
+    G2 -->|Non| Y[Échec du test]
+
+    G1 -->|Timeout| L[Log + Message timeout]
+    L --> G2
+
+    subgraph Cleanup [Nettoyage & Débogage]
+        Z --> K1[Suppression du conteneur]
+        Y --> K2[Diff, accès shell pour debug]
+        K2 --> K3[Conteneur conservé]
+    end

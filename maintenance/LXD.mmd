@@ -1,0 +1,53 @@
+flowchart LR
+
+  subgraph PosteTravail
+    IDE[IDE VSCode/JetBrains]
+    LXDCLI[LXD CLI API]
+  end
+
+  subgraph LXDHost
+    LXDd[LXD Daemon]
+    Storage[(Pool Btrfs ZFS)]
+    Network[(Bridge NAT)]
+  end
+
+  subgraph Containers
+    C1[Test1]
+    C2[Test2]
+    Snap1[snapshot_pre_install]
+    Snap2[snapshot_pre_install]
+  end
+
+  subgraph CICD
+    CI[CI Runner]
+  end
+
+  %% Flux IDE vers LXD
+  IDE --> LXDCLI
+  LXDCLI --> LXDd
+
+  %% LXD gère stockage et réseau
+  LXDd --> Storage
+  LXDd --> Network
+
+  %% Lancement et gestion des conteneurs
+  LXDd --> C1
+  LXDd --> C2
+
+  %% Montage du dossier de scripts
+  IDE --> HostFS[/Scripts Volume/]
+  HostFS --> C1
+  HostFS --> C2
+
+  %% Snapshots
+  C1 --> Snap1
+  C2 --> Snap2
+
+  %% Exécution de commandes dans les conteneurs
+  IDE --> C1
+  IDE --> C2
+
+  %% CI/CD déclenche LXD et les conteneurs
+  CI --> LXDd
+  CI --> C1
+  CI --> C2

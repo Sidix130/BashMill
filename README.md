@@ -39,7 +39,7 @@ Dans le monde du DevOps et du SRE, la confiance n'est pas une option. Chaque cha
 
 ## ⚙️ Le Cycle du Moulin
 
-Le processus est conçu pour être simple et impitoyable, comme un moulin traitant le grain.
+Le processus est conçu pour être simple et robuste, comme un moulin traitant le grain.
 
 ```mermaid
 flowchart TD

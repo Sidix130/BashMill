@@ -1,16 +1,20 @@
-<div align="right">Projet par : <strong>Robin Coquery</strong></div>
+<div align="center">
 
-# BashMill ⚙️
+# BashMill 
 
-![Licence](https://img.shields.io/badge/Licence-GPLv3-blue.svg)
-![Statut](https://img.shields.io/badge/Statut-Prêt%20pour%20la%20Production-brightgreen.svg)
-![Langage](https://img.shields.io/badge/Langage-Bash-black.svg)
+*Outil complet de maintenance pour systèmes Arch Linux  Btrfs.*
 
-**BashMill** est un framework de test d'infrastructure léger et puissant, écrit en pur Bash. Il est conçu pour valider des scripts de configuration de serveurs Linux dans des environnements propres et jetables, en utilisant la puissance des conteneurs système LXD.
+[![Licence: CC BY-NC-SA 4.0](https://img.shields.io/badge/Licence-CC%20BY--NC--SA%204.0-ef9421.svg?style=for-the-badge&logo=creative-commons)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Status](https://img.shields.io/badge/Status-En%20Développement-2ea44f?style=for-the-badge&logo=github)](https://github.com/votre-utilisateur/votre-repo)
+[![Version](https://img.shields.io/badge/Version-0.1.0-0052cc?style=for-the-badge&logo=git)](https://github.com/votre-utilisateur/votre-repo/releases)
 
-Le projet transforme le processus de test, souvent manuel et sujet aux erreurs, en une seule commande fiable, rapide et entièrement automatisée.
+## <p>｡ ₊°༺ [Sidix130](https://github.com/sidix130) ༻°₊ ｡</p>*
 
-*Auteur : [sidix](https://github.com/sidix130)*
+### [🏛️ #Philosophie](#philosophie) • [📖 #Fonctionnalités Clés](#fonctionnalités-clés) • [⚙️ #Le Cycle du Moulin](#le-cycle-du-moulin) • [🛠️ #Utilisation](#utilisation) • [🤝 #Contribuer](#contribuer)
+
+### ![Moulin](assets/image.png) 
+
+</div>
 
 ---
 
@@ -39,7 +43,7 @@ Dans le monde du DevOps et du SRE, la confiance n'est pas une option. Chaque cha
 
 ## ⚙️ Le Cycle du Moulin
 
-Le processus est conçu pour être simple et robuste, comme un moulin traitant le grain.
+Le processus est conçu pour être simple et impitoyable, comme un moulin traitant le grain.
 
 ```mermaid
 flowchart TD
